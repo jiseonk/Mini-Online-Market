@@ -37,13 +37,14 @@ html,body {
 .navbar img{
     width: auto; 
     height:auto;
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 45px;
+    max-height: 45px;
 }
 
 .navbar .button{
-    width: 17%;
+    width: 15%;
     height:100%;
+    font-size:0.8em;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -99,4 +100,34 @@ html,body {
 
 #pink {
     background-color:Salmon;
+}
+
+@media only screen and (min-width: 768px){
+    .navbar{
+        width: 70%;
+    }
+
+    .list .items{
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .navbar{
+        width: 50%;
+    }
+
+    .list .items{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .navbar{
+        width: 30%;
+    }
+
+    .list .items{
+        width: 30%;
+    }
 }

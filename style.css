@@ -8,10 +8,12 @@ html,body {
     height:100%;
     background-color: #232a38;
     color: black;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .logo{
-
+    margin-top:8px;
 }
 
 

@@ -29,7 +29,7 @@ html,body {
 .navbar {
     width: 80%;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 16px 0;
     margin-bottom: 24px;
 }
@@ -58,8 +58,10 @@ html,body {
     display:flex;
     flex-direction: column;
     align-items: center;
- 
 
+    font-family: 'Merriweather', serif;
+    overflow:scroll;
+    margin-bottom: 32px;
 }
 
 .list .items{
@@ -71,6 +73,7 @@ html,body {
     border-radius: 5px;
     padding: 4px;
     margin:4px;
+
 }
 
 .list .items img{

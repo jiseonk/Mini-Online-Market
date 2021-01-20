@@ -53,6 +53,13 @@ html,body {
     margin-bottom: 24px;
 }
 
+.navbar .btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
 .navbar .btn .imgBtn{
     width: auto; 
     height:auto;

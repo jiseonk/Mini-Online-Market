@@ -8,9 +8,11 @@
   
     /*size*/
     --size-button: 60px;
+    --size-font: 18px;
 
     /*animation*/
     --size-animation-duration: 300ms;
+
 }
 
 
@@ -24,7 +26,7 @@ html,body {
     height:100%;
     background-color: var(--color-black);
     color:var(--color-black);
-    font-size: 18px;
+    font-size: var(--size-font);
     font-family: 'Source Sans Pro', sans-serif;
 }
 

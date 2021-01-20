@@ -9,6 +9,8 @@
     /*size*/
     --size-button: 60px;
 
+    /*animation*/
+    --size-animation-duration: 300ms;
 }
 
 
@@ -44,7 +46,7 @@ html,body {
 
 .btn:hover, #logo:hover{
     transform: scale(1.1);
-    transition: transform 300ms ease;
+    transition: transform var(--size-animation-duration) ease;
 }
 
 /* Buttons */

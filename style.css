@@ -26,6 +26,7 @@ html,body {
 
 }
 
+/* Buttons */
 .navbar {
     width: 80%;
     display:flex;
@@ -34,14 +35,14 @@ html,body {
     margin-bottom: 24px;
 }
 
-.navbar img{
+.navbar .btn img{
     width: auto; 
     height:auto;
     max-width: 45px;
     max-height: 45px;
 }
 
-.navbar .button{
+.navbar .colorBtn{
     width: 15%;
     height:100%;
     font-size:0.8em;

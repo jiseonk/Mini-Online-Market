@@ -1,4 +1,5 @@
 // Navbar buttons
+
 let blueBtn = document.getElementById('blue');
 let yellowBtn = document.getElementById('yellow');
 let pinkBtn = document.getElementById('pink');
@@ -24,56 +25,29 @@ let logo = document.getElementById('logo');
 
 
 // Click logo
-logo.addEventListener('click', function(){
-    for(let i=0; i<yellowClothes.length; i++){
-        blueClothes[i].style.display = 'flex';
-    }
-    for(let i=0; i<yellowClothes.length; i++){
-        pinkClothes[i].style.display = 'flex';
-    }
-    for(let i=0; i<yellowClothes.length; i++){
-        yellowClothes[i].style.display = 'flex';
-    }
-});
+logo.addEventListener('click', displayAllItems());
 
 
 // Filtering by color
 blueBtn.addEventListener('click', function(){
-
+    hideAllItems();
     for(let i=0; i<blueClothes.length; i++){
         blueClothes[i].style.display = 'flex';
-    }
-    for(let i=0; i<pinkClothes.length; i++){
-        pinkClothes[i].style.display = 'none';
-    }
-    for(let i=0; i<yellowClothes.length; i++){
-        yellowClothes[i].style.display = 'none';
     }
 });
 
 
 pinkBtn.addEventListener('click', function(){
-    
-    for(let i=0; i<blueClothes.length; i++){
-        blueClothes[i].style.display = 'none';
-    }
+    hideAllItems();
     for(let i=0; i<pinkClothes.length; i++){
         pinkClothes[i].style.display = 'flex';
     }
-    for(let i=0; i<yellowClothes.length; i++){
-        yellowClothes[i].style.display = 'none';
-    }
+
 });
 
 
 yellowBtn.addEventListener('click', function(){
-
-    for(let i=0; i<blueClothes.length; i++){
-        blueClothes[i].style.display = 'none';
-    }
-    for(let i=0; i<pinkClothes.length; i++){
-        pinkClothes[i].style.display = 'none';
-    }
+    hideAllItems();
     for(let i=0; i<yellowClothes.length; i++){
         yellowClothes[i].style.display = 'flex';
     }
@@ -83,39 +57,23 @@ yellowBtn.addEventListener('click', function(){
 
 // Filtering by type
 tshirtBtn.addEventListener('onclick' ,function(){
-
+    hideAllItems();
     for(let i=0; i<tshirtClothes.length; i++){
         tshirtClothes[i].style.display = 'flex';
     }
-    for(let i=0; i<skirtClothes.length; i++){
-        skirtClothes[i].style.display = 'none';
-    }
-    for(let i=0; i<pantsClothes.length; i++){
-        pantsClothes[i].style.display = 'none';
-    }
+
 });
 
 skirtBtn.addEventListener('onclick', function(){
-
-    for(let i=0; i<tshirtClothes.length; i++){
-        tshirtClothes[i].style.display = 'none';
-    }
+    hideAllItems();
     for(let i=0; i<skirtClothes.length; i++){
         skirtClothes[i].style.display = 'flex';
     }
-    for(let i=0; i<pantsClothes.length; i++){
-        pantsClothes[i].style.display = 'none';
-    }
+  
 });
 
 pantsBtn.addEventListener('onclick', function(){
-
-    for(let i=0; i<tshirtClothes.length; i++){
-        tshirtClothes[i].style.display = 'none';
-    }
-    for(let i=0; i<skirtClothes.length; i++){
-        skirtClothes[i].style.display = 'none';
-    }
+    hideAllItems();
     for(let i=0; i<pantsClothes.length; i++){
         pantsClothes[i].style.display = 'flex';
     }
@@ -168,5 +126,30 @@ function randomSize(){
         return 'medium';
     } else  if(randomNumber === 2){
         return 'large';
+    }
+}
+
+function displayAllItems(){
+
+    for(let i=0; i<blueClothes.length; i++){
+        blueClothes[i].style.display = 'flex';
+    }
+    for(let i=0; i<pinkClothes.length; i++){
+        pinkClothes[i].style.display = 'flex';
+    }
+    for(let i=0; i<yellowClothes.length; i++){
+        yellowClothes[i].style.display = 'flex';
+    }
+}
+
+function hideAllItems(){
+    for(let i=0; i<blueClothes.length; i++){
+        blueClothes[i].style.display = 'none';
+    }
+    for(let i=0; i<pinkClothes.length; i++){
+        pinkClothes[i].style.display = 'none';
+    }
+    for(let i=0; i<yellowClothes.length; i++){
+        yellowClothes[i].style.display = 'none';
     }
 }

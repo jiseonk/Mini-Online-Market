@@ -16,6 +16,26 @@ let tshirtClothes = document.getElementsByClassName('tshirt');
 let pantsClothes = document.getElementsByClassName('pants');
 let skirtClothes = document.getElementsByClassName('skirt');
 
+// function
+function addItem(event){
+    const item = event.target.id;
+    const list = document.querySelector('.list');
+
+    list.insertAdjacentHTML('beforeend', renderItemTemplate(item));
+
+}
+
+function renderItemTemplate(item){
+    return  `<li class="items pink ${item}">
+    <img src="imgs/pink_t.png" alt="${item}"/>
+    <p>pink ${item}, small </p>
+    </li>`
+}
+
+function randomColor(){
+    
+}
+
 
 // logo
 let logo = document.getElementById('logo');

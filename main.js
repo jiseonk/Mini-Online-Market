@@ -16,25 +16,58 @@ let tshirtClothes = document.getElementsByClassName('tshirt');
 let pantsClothes = document.getElementsByClassName('pants');
 let skirtClothes = document.getElementsByClassName('skirt');
 
-// function
-function addItem(event){
-    const item = event.target.id;
-    const list = document.querySelector('.list');
+// functions
 
-    list.insertAdjacentHTML('beforeend', renderItemTemplate(item));
+addNewItem();
+
+function addNewItem(){
+
+    const list = document.querySelector('.list');
+    const arr = ['t-shirt', 'pants', 'skirt'];
+
+    for(let j=0; j<arr.length; j++){
+        for(let i=0; i<5; i++){
+            
+            const color = randomColor();
+            const size = randomSize();
+            const newItem = renderItemTemplate(color, size, arr[j]);
+    
+            list.insertAdjacentHTML('beforeend', newItem);
+        }
+    }
 
 }
 
-function renderItemTemplate(item){
-    return  `<li class="items pink ${item}">
-    <img src="imgs/pink_t.png" alt="${item}"/>
-    <p>pink ${item}, small </p>
-    </li>`
+function renderItemTemplate(color, size, item){
+
+    return  `<li class="items ${color} ${item}">
+        <img src="imgs/${color}_${item[0]}.png" alt="${item}"/>
+        <p>${color} ${item}, ${size} </p>
+        </li>`;
 }
 
 function randomColor(){
-    
+    let randomNumber = Math.floor(Math.random()*3);
+    if(randomNumber === 0){
+        return 'blue';
+    } else  if(randomNumber === 1){
+        return 'yellow';
+    } else  if(randomNumber === 2){
+        return 'pink';
+    }
 }
+
+function randomSize(){
+    let randomNumber = Math.floor(Math.random()*3);
+    if(randomNumber === 0){
+        return 'small';
+    } else  if(randomNumber === 1){
+        return 'medium';
+    } else  if(randomNumber === 2){
+        return 'large';
+    }
+}
+
 
 
 // logo

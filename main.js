@@ -1,10 +1,13 @@
 // Navbar buttons
-let blue = document.getElementById('blue');
-let yellow = document.getElementById('yellow');
-let pink = document.getElementById('pink');
-let tshirt = document.getElementById('tshirt');
-let skirt = document.getElementById('skirt');
-let pants = document.getElementById('pants');
+let blueBtn = document.getElementById('blue');
+let yellowBtn = document.getElementById('yellow');
+let pinkBtn = document.getElementById('pink');
+let tshirtBtn = document.getElementById('t-shirt');
+let skirtBtn = document.getElementById('skirt');
+let pantsBtn = document.getElementById('pants');
+
+// Create Item lists
+addNewItem();
 
 // Clothes by color
 let blueClothes = document.getElementsByClassName('blue');
@@ -12,13 +15,12 @@ let pinkClothes = document.getElementsByClassName('pink');
 let yellowClothes = document.getElementsByClassName('yellow');
 
 // Clothes by type
-let tshirtClothes = document.getElementsByClassName('tshirt');
+let tshirtClothes = document.getElementsByClassName('t-shirt');
 let pantsClothes = document.getElementsByClassName('pants');
 let skirtClothes = document.getElementsByClassName('skirt');
 
-// functions
 
-addNewItem();
+// functions
 
 function addNewItem(){
 
@@ -69,14 +71,12 @@ function randomSize(){
 }
 
 
-
 // logo
 let logo = document.getElementById('logo');
 
 
 // Click logo
-logo.onclick = function(){
-
+logo.addEventListener('click', function(){
     for(let i=0; i<yellowClothes.length; i++){
         blueClothes[i].style.display = 'flex';
     }
@@ -86,13 +86,13 @@ logo.onclick = function(){
     for(let i=0; i<yellowClothes.length; i++){
         yellowClothes[i].style.display = 'flex';
     }
-}
+});
 
 
 // Filtering by color
-blue.onclick = function(){
+blueBtn.addEventListener('click', function(){
 
-    for(let i=0; i<yellowClothes.length; i++){
+    for(let i=0; i<blueClothes.length; i++){
         blueClothes[i].style.display = 'flex';
     }
     for(let i=0; i<pinkClothes.length; i++){
@@ -101,72 +101,74 @@ blue.onclick = function(){
     for(let i=0; i<yellowClothes.length; i++){
         yellowClothes[i].style.display = 'none';
     }
-}
+});
 
-pink.onclick = function(){
+
+pinkBtn.addEventListener('click', function(){
     
-    for(let i=0; i<pinkClothes.length; i++){
+    for(let i=0; i<blueClothes.length; i++){
         blueClothes[i].style.display = 'none';
     }
-    for(let i=0; i<yellowClothes.length; i++){
+    for(let i=0; i<pinkClothes.length; i++){
         pinkClothes[i].style.display = 'flex';
     }
     for(let i=0; i<yellowClothes.length; i++){
         yellowClothes[i].style.display = 'none';
     }
-}
+});
 
-yellow.onclick = function(){
 
-    for(let i=0; i<pinkClothes.length; i++){
+yellowBtn.addEventListener('click', function(){
+
+    for(let i=0; i<blueClothes.length; i++){
         blueClothes[i].style.display = 'none';
     }
-    for(let i=0; i<yellowClothes.length; i++){
+    for(let i=0; i<pinkClothes.length; i++){
         pinkClothes[i].style.display = 'none';
     }
     for(let i=0; i<yellowClothes.length; i++){
         yellowClothes[i].style.display = 'flex';
     }
-}
+});
 
 
 
 // Filtering by type
-tshirt.onclick = function(){
+tshirtBtn.addEventListener('onclick' ,function(){
 
-    for(let i=0; i<yellowClothes.length; i++){
+    for(let i=0; i<tshirtClothes.length; i++){
         tshirtClothes[i].style.display = 'flex';
     }
-    for(let i=0; i<pinkClothes.length; i++){
+    for(let i=0; i<skirtClothes.length; i++){
         skirtClothes[i].style.display = 'none';
     }
-    for(let i=0; i<yellowClothes.length; i++){
+    for(let i=0; i<pantsClothes.length; i++){
         pantsClothes[i].style.display = 'none';
     }
-}
+});
 
-skirt.onclick = function(){
+skirtBtn.addEventListener('onclick', function(){
 
-    for(let i=0; i<yellowClothes.length; i++){
+    for(let i=0; i<tshirtClothes.length; i++){
         tshirtClothes[i].style.display = 'none';
     }
-    for(let i=0; i<pinkClothes.length; i++){
+    for(let i=0; i<skirtClothes.length; i++){
         skirtClothes[i].style.display = 'flex';
     }
-    for(let i=0; i<yellowClothes.length; i++){
+    for(let i=0; i<pantsClothes.length; i++){
         pantsClothes[i].style.display = 'none';
     }
-}
+});
 
-pants.onclick = function(){
+pantsBtn.addEventListener('onclick', function(){
 
-    for(let i=0; i<yellowClothes.length; i++){
+    for(let i=0; i<tshirtClothes.length; i++){
         tshirtClothes[i].style.display = 'none';
     }
-    for(let i=0; i<pinkClothes.length; i++){
+    for(let i=0; i<skirtClothes.length; i++){
         skirtClothes[i].style.display = 'none';
     }
-    for(let i=0; i<yellowClothes.length; i++){
+    for(let i=0; i<pantsClothes.length; i++){
         pantsClothes[i].style.display = 'flex';
     }
-}
+});

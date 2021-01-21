@@ -1,5 +1,4 @@
 // Navbar buttons
-
 let blueBtn = document.getElementById('blue');
 let yellowBtn = document.getElementById('yellow');
 let pinkBtn = document.getElementById('pink');
@@ -56,7 +55,7 @@ yellowBtn.addEventListener('click', function(){
 
 
 // Filtering by type
-tshirtBtn.addEventListener('onclick' ,function(){
+tshirtBtn.addEventListener('click' ,function(){
     hideAllItems();
     for(let i=0; i<tshirtClothes.length; i++){
         tshirtClothes[i].style.display = 'flex';
@@ -64,7 +63,7 @@ tshirtBtn.addEventListener('onclick' ,function(){
 
 });
 
-skirtBtn.addEventListener('onclick', function(){
+skirtBtn.addEventListener('click', function(){
     hideAllItems();
     for(let i=0; i<skirtClothes.length; i++){
         skirtClothes[i].style.display = 'flex';
@@ -72,7 +71,7 @@ skirtBtn.addEventListener('onclick', function(){
   
 });
 
-pantsBtn.addEventListener('onclick', function(){
+pantsBtn.addEventListener('click', function(){
     hideAllItems();
     for(let i=0; i<pantsClothes.length; i++){
         pantsClothes[i].style.display = 'flex';

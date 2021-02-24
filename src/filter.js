@@ -1,57 +1,40 @@
-// Clothes by color
-let blueClothes = document.getElementsByClassName("blue");
-let pinkClothes = document.getElementsByClassName("pink");
-let yellowClothes = document.getElementsByClassName("yellow");
+export const filter = (target) => {
+  const color = target.id;
+  const $blueClothes = getItem("blue");
+  const $pinkClothes = getItem("pink");
+  const $yellowClothes = getItem("yellow");
 
-// Clothes by type
-let tshirtClothes = document.getElementsByClassName("t-shirt");
-let pantsClothes = document.getElementsByClassName("pants");
-let skirtClothes = document.getElementsByClassName("skirt");
+  console.log(color);
 
-// logo
-let logo = document.getElementById("logo");
-
-// Click logo
-logo.addEventListener("click", displayAllItems());
-
-blueBtn.addEventListener("click", function () {
-  hideAllItems();
-  for (let i = 0; i < blueClothes.length; i++) {
-    blueClothes[i].style.display = "flex";
+  if (color === "blue") {
+    render($blueClothes, $pinkClothes, $yellowClothes);
+  } else if (color === "pink") {
+    render($pinkClothes, $blueClothes, $yellowClothes);
+  } else if (color === "yellow") {
+    render($yellowClothes, $pinkClothes, $blueClothes);
+  } else {
+    console.log("error!");
   }
-});
+};
 
-pinkBtn.addEventListener("click", function () {
-  hideAllItems();
-  for (let i = 0; i < pinkClothes.length; i++) {
-    pinkClothes[i].style.display = "flex";
-  }
-});
+const render = (selectedColor, deselectedColorOne, deselectedColorTwo) => {
+  showItem(selectedColor);
+  hideItem(deselectedColorOne);
+  hideItem(deselectedColorTwo);
+};
 
-yellowBtn.addEventListener("click", function () {
-  hideAllItems();
-  for (let i = 0; i < yellowClothes.length; i++) {
-    yellowClothes[i].style.display = "flex";
-  }
-});
+const getItem = (color) => {
+  return document.getElementsByClassName(color);
+};
 
-tshirtBtn.addEventListener("click", function () {
-  hideAllItems();
-  for (let i = 0; i < tshirtClothes.length; i++) {
-    tshirtClothes[i].style.display = "flex";
+const showItem = (items) => {
+  for (let i = 0; i < items.length; i++) {
+    items[i].style.display = "flex";
   }
-});
+};
 
-skirtBtn.addEventListener("click", function () {
-  hideAllItems();
-  for (let i = 0; i < skirtClothes.length; i++) {
-    skirtClothes[i].style.display = "flex";
+const hideItem = (items) => {
+  for (let i = 0; i < items.length; i++) {
+    items[i].style.display = "none";
   }
-});
-
-pantsBtn.addEventListener("click", function () {
-  hideAllItems();
-  for (let i = 0; i < pantsClothes.length; i++) {
-    pantsClothes[i].style.display = "flex";
-  }
-});
+};

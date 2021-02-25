@@ -4,8 +4,6 @@ export const filter = (target) => {
   const $pinkClothes = getItem("pink");
   const $yellowClothes = getItem("yellow");
 
-  console.log(color);
-
   if (color === "blue") {
     render($blueClothes, $pinkClothes, $yellowClothes);
   } else if (color === "pink") {
@@ -23,11 +21,11 @@ const render = (selectedColor, deselectedColorOne, deselectedColorTwo) => {
   hideItem(deselectedColorTwo);
 };
 
-const getItem = (color) => {
+export const getItem = (color) => {
   return document.getElementsByClassName(color);
 };
 
-const showItem = (items) => {
+export const showItem = (items) => {
   for (let i = 0; i < items.length; i++) {
     items[i].style.display = "flex";
   }

@@ -8,7 +8,12 @@
   
     /*size*/
     --size-button: 60px;
+    --size-item: 50px;
     --size-font: 18px;
+    --size-border: 5px;
+    --size-small-space : 8px;
+    --size-medium-space : 24px;
+    --size-large-space: 32px;
 
     /*animation*/
     --size-animation-duration: 300ms;
@@ -42,7 +47,7 @@ html,body {
 
 /* logo */
 .logo-container{
-    margin-top:8px;
+    margin-top:var(--size-small-space);
     cursor: pointer;
 }
 
@@ -56,8 +61,8 @@ html,body {
     width: 80%;
     display:flex;
     justify-content: space-evenly;
-    padding: 16px 0;
-    margin-bottom: 24px;
+    padding: calc(var(--size-small-space)*2) 0;
+    margin-bottom: var(--size-medium-space);
 }
 
 .navbar .btn {
@@ -76,7 +81,7 @@ html,body {
     width: 15%;
     height:100%;
     font-size:0.8em;
-    border-radius: 5px;
+    border-radius: var(--size-border);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,39 +90,41 @@ html,body {
 
 /* Items */
 .item-container {
-    width: 100%;
+    width: 60%;
     height:100%;
     display:flex;
     flex-direction: column;
     align-items: center;
 
     font-family: 'Merriweather', serif;
-    overflow:scroll;
-    margin-bottom: 32px;
+    overflow-y:scroll;
+    margin-bottom: var(--size-large-space);
+    padding:0;
 }
 
 .item-container .items{
-    width: 80%;
+
+    width:90%;
     display: flex;
     align-items: center;
 
     background-color: var(--color-white);
-    border-radius: 5px;
-    padding: 4px;
-    margin:4px;
+    border-radius: var(--size-border);
+    padding: calc(var(--size-small-space)/2);
+    margin:calc(var(--size-small-space)/2);
 
 }
 
 .item-container .items img{
     width: auto; 
     height:auto;
-    max-width: 50px;
-    max-height: 50px;
-    margin : 0 16px;
+    max-width: var(--size-item);
+    max-height: var(--size-item);
+    margin : 0 calc(var(--size-small-space)*2);
 }
 
 .item-container .items p{
-    padding-left: 4px;
+    padding-left: calc(var(--size-small-space)/2);
 }
 
 
@@ -138,7 +145,7 @@ html,body {
         width: 70%;
     }
 
-    .item-container .items{
+    .item-container {
         width: 70%;
     }
 }
@@ -148,7 +155,7 @@ html,body {
         width: 50%;
     }
 
-    .item-container .items{
+    .item-container {
         width: 50%;
     }
 }
@@ -158,7 +165,7 @@ html,body {
         width: 30%;
     }
 
-    .item-container .items{
-        width: 30%;
+    .item-container{
+        width : 30%;
     }
 }

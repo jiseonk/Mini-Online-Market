@@ -2,6 +2,7 @@ import { $logoContainer, $navbar } from "./dom.js";
 import { addItem } from "./addItem.js";
 import { filter } from "./filter.js";
 import { showAllList } from "./logo.js";
+import { loadItems } from "./loadItem.js";
 
 const app = () => {
   $logoContainer.addEventListener("click", showAllList);
@@ -15,5 +16,13 @@ const clickHandler = ({ target }) => {
     filter(target);
   }
 };
+
+loadItems()
+  .then((items) => {
+    console.log(items);
+    //displayItems(items);
+    //setEventListeners(items);
+  })
+  .catch(console.log);
 
 app();

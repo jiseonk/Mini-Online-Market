@@ -1,28 +1,38 @@
-export const filter = (target) => {
-  const color = target.id;
+export const filter = ({ target }) => {
+  const type = target.id;
+  const $tshirt = getItem("tshirt");
+  const $pants = getItem("pants");
+  const $skirt = getItem("skirt");
   const $blueClothes = getItem("blue");
   const $pinkClothes = getItem("pink");
   const $yellowClothes = getItem("yellow");
 
-  if (color === "blue") {
+  console.log(type);
+  if (type === "blue") {
     render($blueClothes, $pinkClothes, $yellowClothes);
-  } else if (color === "pink") {
+  } else if (type === "pink") {
     render($pinkClothes, $blueClothes, $yellowClothes);
-  } else if (color === "yellow") {
+  } else if (type === "yellow") {
     render($yellowClothes, $pinkClothes, $blueClothes);
+  } else if (type === "t-shirt") {
+    render($tshirt, $pants, $skirt);
+  } else if (type === "pants") {
+    render($pants, $skirt, $tshirt);
+  } else if (type === "skirt") {
+    render($skirt, $pants, $tshirt);
   } else {
     console.log("error!");
   }
 };
 
-const render = (selectedColor, deselectedColorOne, deselectedColorTwo) => {
-  showItem(selectedColor);
-  hideItem(deselectedColorOne);
-  hideItem(deselectedColorTwo);
+const render = (selectedItem, deselectedItemOne, deselectedItemTwo) => {
+  showItem(selectedItem);
+  hideItem(deselectedItemOne);
+  hideItem(deselectedItemTwo);
 };
 
-export const getItem = (color) => {
-  return document.getElementsByClassName(color);
+export const getItem = (type) => {
+  return document.getElementsByClassName(type);
 };
 
 export const showItem = (items) => {

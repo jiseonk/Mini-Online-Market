@@ -4,13 +4,16 @@
 Using `HTML` `CSS` Vanila `JavaScript`
 
 ## Features
-1. Scroll bar in item container
+### 1. Scroll bar in item container  
+  
 ![scroll](./img/feature/scroll.gif)  
 
-2. Filtering buttons
+### 2. Filtering buttons 
+ 
 ![filter](./img/feature/filter.gif)  
 
-3. Logo button : Show all items 
+### 3. Logo button : Show all items  
+  
 ![logo](./img/feature/logo.gif)  
 
 ## Project References

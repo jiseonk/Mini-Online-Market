@@ -1,16 +1,18 @@
-# Mini Shopping Mall
-This is a mini project using javascript.  
-I got these icon images from [Youtube Dreamcoding by ellie](https://youtu.be/We2Kv1HMGvc, "Dreamcoding by ellie"). 
+# Mini Shopping Market
 
-![click](./imgs/display/click.gif)  
-If you click each icons, the items are filtered by the colors or the types of clothes.  
-If you click the logo, everything's going back to its original state.  
+## Stack
+Using `HTML` `CSS` Vanila `JavaScript`
 
-## Mobile Screen
-![mobile](./imgs/display/mobile.png)
+## Features
+1. Scroll bar in item container
+![scroll](./img/feature/scroll.gif)  
 
-## Tablet Screen
-![tablet](./imgs/display/tablet.png)
+2. Filtering buttons
+![filter](./img/feature/filter.gif)  
 
-## Laptop Screen
-![laptop](./imgs/display/laptop.png)
+3. Logo button : Show all items 
+![logo](./img/feature/logo.gif)  
+
+## Project References
+[Youtube Dreamcoding by ellie](https://youtu.be/We2Kv1HMGvc, "Dreamcoding by ellie")
+

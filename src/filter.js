@@ -7,7 +7,6 @@ export const filter = ({ target }) => {
   const $pinkClothes = getItem("pink");
   const $yellowClothes = getItem("yellow");
 
-  console.log(type);
   if (type === "blue") {
     render($blueClothes, $pinkClothes, $yellowClothes);
   } else if (type === "pink") {
@@ -32,7 +31,7 @@ const render = (selectedItem, deselectedItemOne, deselectedItemTwo) => {
 };
 
 export const getItem = (type) => {
-  return document.getElementsByClassName(type);
+  return document.querySelectorAll(`.${type}`);
 };
 
 export const showItem = (items) => {

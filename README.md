@@ -1,7 +1,7 @@
 # Mini Shopping Market
 
 ## Stack
-Using `HTML` `CSS` `JavaScript`
+Using `HTML` `CSS` `JavaScript`   
 Save the necessary data in the `json` file and load it using `async` `await`. 
 
 ## Features
